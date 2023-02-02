@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "753586703917",
+    "project_id": "employee-client",
+    "storage_bucket": "employee-client.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753586703917:android:545bb7da89533c0fc9b2a4",
+        "android_client_info": {
+          "package_name": "com.example.etracker_client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753586703917-vjnf85u68bnb027g83h1cv81g561f1q9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsFTpjmufci3l3V6LQ5bciYkcvP8QSQI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753586703917-vjnf85u68bnb027g83h1cv81g561f1q9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -20,20 +20,22 @@ class AuthController extends ChangeNotifier {
   }) async {
     setloading(true);
     var imeiCode = await Pref().getImei();
-    log(imeiCode.toString(),name: 'auth controller');
+    log(imeiCode.toString(), name: 'auth controller');
     var res =
         await ApiServices().checkLogin(id: empcode, psw: psw, imei: imeiCode);
     log(res.toString(), name: "authcontroller");
     if (res != '!200' && res != "error" && res != "noNetwork") {
       if (res['success'] == 1) {
         AllLoginModel result = AllLoginModel.fromJson(res);
-        Pref().setUserInfo(
+
+        await Pref().setUserInfo(
             psw: psw,
             empcode: result.items.empcode,
             name: result.items.username + result.items.lastname,
             number: result.items.number,
             age: result.items.age,
             position: result.items.position);
+
         setloading(false);
 
         return "ok";
@@ -55,9 +57,8 @@ class AuthController extends ChangeNotifier {
 
   checkCredtional() async {
     var res = await Pref().getUserCreditional();
-    log(res.toString(),name: "user cred");
-    var result =
-        await checkLogin(empcode: res['id'], psw: res['psw']);
+    log(res.toString(), name: "user cred");
+    var result = await checkLogin(empcode: res['id'], psw: res['psw']);
     if (result == "ok") {
       return true;
     } else {

@@ -1,10 +1,7 @@
-
 import 'package:etracker_client/services/db/pref.dart';
 import 'package:etracker_client/utils/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -13,16 +10,12 @@ class Profile extends StatefulWidget {
   State<Profile> createState() => _ProfileState();
 }
 
-
 class _ProfileState extends State<Profile> {
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const Text("Profile"),
+        title: const Text("Profile"),
       ),
       body: FutureBuilder(
         future: Pref().getUserInfo(),
@@ -48,8 +41,9 @@ class _ProfileState extends State<Profile> {
                 child: Text("nonetwork"),
               );
             } else {
-              return  body(context, snapshot.data);
-              
+              //  var asd = await Pref().getUserInfo();
+              print(snapshot.data);
+              return body(context, snapshot.data);
             }
           } else {
             return const Center(
@@ -61,51 +55,52 @@ class _ProfileState extends State<Profile> {
           }
         },
       ),
-    
     );
   }
 
-  Column body(BuildContext context,  value) {
+  Column body(BuildContext context, value) {
     return Column(
       children: [
         spaceHeight(10),
-         Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Card(
-            elevation: 3,
-            surfaceTintColor: Colors.white,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: SizedBox(
-              // height: 400,
-              width: sW(context) - 40,
-              child: Column(
-                children: [
-                  spaceHeight(5),
-                  CircleAvatar(
-                    radius: 40,
-                    backgroundColor: Colors.grey[200],
-                  ),
-                  spaceHeight(5),
-                  tile(txt: "EmpCode", content: value['id']),
-                  tile(
-                      txt: "EmpName", content:value['name']),
-                  tile(txt: "Position", content: value['position'], isRole: true),
-                  tile(txt: "Phone", content: value['number']),
-                  tile(txt: "Age", content: value['age']),
-                ],
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Card(
+              elevation: 3,
+              surfaceTintColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: SizedBox(
+                // height: 400,
+                width: sW(context) - 40,
+                child: Column(
+                  children: [
+                    spaceHeight(5),
+                    CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.grey[200],
+                    ),
+                    spaceHeight(5),
+                    tile(txt: "EmpCode", content: value['id']),
+                    tile(txt: "EmpName", content: value['name']),
+                    tile(
+                        txt: "Position",
+                        content: value['position'],
+                        isRole: true),
+                    tile(txt: "Phone", content: value['number']),
+                    tile(txt: "Age", content: value['age']),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
-      ),
+          ],
+        ),
       ],
     );
   }
 
-   Padding tile({required txt, required content, isRole = false}) {
+  Padding tile({required txt, required content, isRole = false}) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
@@ -129,12 +124,12 @@ class _ProfileState extends State<Profile> {
               children: [
                 Expanded(
                   child: Text(
-                    content,
+                    content ?? "empty",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 12,
                         color: isRole
-                            ?const Color.fromARGB(255, 10, 17, 75)
+                            ? const Color.fromARGB(255, 10, 17, 75)
                             : Colors.grey),
                   ),
                 ),

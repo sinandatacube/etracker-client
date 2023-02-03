@@ -98,10 +98,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 // PopupMenuItem 1
                 PopupMenuItem(
                   value: 1,
-                  onTap: () =>
-                      navigatorKey.currentState!.push(MaterialPageRoute(
-                    builder: (context) => Profile(),
-                  )),
+                  onTap: () async {
+                    await Future.delayed(
+                        const Duration(milliseconds: 10),
+                        () => navigatorKey.currentState!.push(MaterialPageRoute(
+                              builder: (context) => const Profile(),
+                            )));
+                  },
                   // row with 2 children
                   child: Row(
                     children: [
@@ -114,6 +117,25 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
+
+                // PopupMenuItem(
+                //   value: 0,
+                //   onTap: () =>
+                //       navigatorKey.currentState!.push(MaterialPageRoute(
+                //     builder: (_) => Profile(),
+                //   )),
+                //   // row with 2 children
+                //   child: Row(
+                //     children: [
+                //       const Icon(
+                //         Icons.person,
+                //         color: Colors.purple,
+                //       ),
+                //       spaceWidth(10),
+                //       const Text("Profile")
+                //     ],
+                //   ),
+                // ),
                 PopupMenuItem(
                   value: 1,
                   onTap: () async {

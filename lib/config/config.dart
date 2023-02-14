@@ -1,6 +1,6 @@
 //// urls ///
 
-const baseUrl = "https://employee-management-usz2.onrender.com/empl";
+const baseUrl = "https://etracker-node.onrender.com/empl";
 
 /// urls
 

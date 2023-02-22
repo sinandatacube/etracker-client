@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDsFTpjmufci3l3V6LQ5bciYkcvP8QSQI0',
-    appId: '1:753586703917:android:545bb7da89533c0fc9b2a4',
-    messagingSenderId: '753586703917',
-    projectId: 'employee-client',
-    storageBucket: 'employee-client.appspot.com',
+    apiKey: 'AIzaSyDPP_8UNcHhEoTQ9LDw7MXZbzo7YrYLj-0',
+    appId: '1:12400826727:android:e063281c39d96d13b0b7c2',
+    messagingSenderId: '12400826727',
+    projectId: 'etracker-90246',
+    storageBucket: 'etracker-90246.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDA8vbtOQfHJFhsqK2cARDDqRlkvhyMTW4',
-    appId: '1:753586703917:ios:fe363067fc8a70f2c9b2a4',
-    messagingSenderId: '753586703917',
-    projectId: 'employee-client',
-    storageBucket: 'employee-client.appspot.com',
-    iosClientId: '753586703917-o0ob3r6flpd1mp4tjm5a69aiii90kvlj.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCtkrne7qdmaDkcsclj_TsqQa0fxyGwfz0',
+    appId: '1:12400826727:ios:e1f2b2625e0ad9f3b0b7c2',
+    messagingSenderId: '12400826727',
+    projectId: 'etracker-90246',
+    storageBucket: 'etracker-90246.appspot.com',
+    iosClientId: '12400826727-pq0bp80tjq83svpjb1c3o4ac2nd4blgk.apps.googleusercontent.com',
     iosBundleId: 'com.example.etrackerClient',
   );
 }

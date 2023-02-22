@@ -1,34 +1,77 @@
 {
   "project_info": {
-    "project_number": "753586703917",
-    "project_id": "employee-client",
-    "storage_bucket": "employee-client.appspot.com"
+    "project_number": "12400826727",
+    "project_id": "etracker-90246",
+    "storage_bucket": "etracker-90246.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:753586703917:android:545bb7da89533c0fc9b2a4",
+        "mobilesdk_app_id": "1:12400826727:android:a54eb32d22f569d6b0b7c2",
         "android_client_info": {
           "package_name": "com.example.etracker_client"
         }
       },
       "oauth_client": [
         {
-          "client_id": "753586703917-vjnf85u68bnb027g83h1cv81g561f1q9.apps.googleusercontent.com",
+          "client_id": "12400826727-q1b8osjokui7hgdc7rcapaci9m7cgt3f.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDsFTpjmufci3l3V6LQ5bciYkcvP8QSQI0"
+          "current_key": "AIzaSyDPP_8UNcHhEoTQ9LDw7MXZbzo7YrYLj-0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "753586703917-vjnf85u68bnb027g83h1cv81g561f1q9.apps.googleusercontent.com",
+              "client_id": "12400826727-q1b8osjokui7hgdc7rcapaci9m7cgt3f.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "12400826727-pq0bp80tjq83svpjb1c3o4ac2nd4blgk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.etrackerClient"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12400826727:android:e063281c39d96d13b0b7c2",
+        "android_client_info": {
+          "package_name": "com.sparrow.etracker_client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12400826727-q1b8osjokui7hgdc7rcapaci9m7cgt3f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPP_8UNcHhEoTQ9LDw7MXZbzo7YrYLj-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12400826727-q1b8osjokui7hgdc7rcapaci9m7cgt3f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "12400826727-pq0bp80tjq83svpjb1c3o4ac2nd4blgk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.etrackerClient"
+              }
             }
           ]
         }
